@@ -1,4 +1,13 @@
-Laura-Maria Kiiser
-ISP217
-Skriptimise alused tundub, huvitav aine, mulle täitsa meeldib.
-Ma ei teadnud varem sellist keskkonda nagu github, see on päris tore asi, mida saaks ka muudeks asjadeks kasutada.
+#!/bin/bash
+#
+#kasutajate nimekiri kujul Perenimi, Eesnimi
+#
+#skripti alus
+#
+who | cut -f1 -d" " | cut -f2 -d"." > perenimi # lõikame perenimi - see on 2. element peale punkti ja salvestame faili
+who | cut -f1 -d" " | cut -f1 -d"." > eesnimi # lõikame eesnimi - see on 1. element ennam punkti ja salvestame faili
+paste -d"." perenimi eesnimi > nimed # kleebime need failid vastavas järjekorras kokku
+cat nimed | sort | uniq # sorteerimine väljund ja võtame korduvad välja
+#
+#skripti lõpp
+
