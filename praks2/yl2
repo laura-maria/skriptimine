@@ -7,7 +7,7 @@
 who | cut -f1 -d" " | cut -f2 -d"." > perenimi # lõikame perenimi - see on 2. element peale punkti ja salvestame faili
 who | cut -f1 -d" " | cut -f1 -d"." > eesnimi # lõikame eesnimi - see on 1. element ennam punkti ja salvestame faili
 paste -d"." perenimi eesnimi > nimed # kleebime need failid vastavas järjekorras kokku
-cat nimed | sort | uniq # sorteerimine väljund ja võtame korduvad välja
+cat nimed | awk -F'.' '{print $2"."$1}' # sorteerimine väljund ja võtame korduvad välja
 #
 #skripti lõpp
 
