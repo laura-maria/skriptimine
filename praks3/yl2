@@ -1,0 +1,4 @@
+#!/bin/bash
+#algus
+echo `find /var/ -name *.log 2>> /dev/null`
+#sorteerib kaustast /var/ .log lõpuga failid
