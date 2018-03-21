@@ -1,0 +1,4 @@
+#!/bin/bash
+date +"%A, %B %d, %Y" #väljastab kuupaeva
+date +"%H:%M" #väljastab kellaaja
+cal #väljastab kalendri
