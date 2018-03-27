@@ -1,0 +1,35 @@
+#!/bin/bash
+#
+#kandiku pikkus ja laius
+echo -n "Sisesta kandiku pikkus ja laius (cm):"
+read k_pikkus k_laius
+#küpsise andmed
+echo -n "Siseta kypsise pikkus ja laius (cm):"
+read ky_pikkus ky_laius
+echo -n "Sisesta mitu kypsist on pakis (tk):"
+read pakis
+#kihtide arv
+echo -n "Sisesta kihtide arv: (number)"
+read kihid
+#
+#arvutused
+#
+#kandiku pikkus
+kandik=`expr $k_pikkus \* $k_laius`
+#küpsise pindala
+kypsis=`expr $ky_pikkus \* $ky_laius`
+#palju küpsist mahu kandikule ühes kihis - kandiku pindala jagatud küpsise pindalaga
+yhes_kihis=`expr $kandik / $kypsis`
+#kokku küpsiseid terves tordis on ühes kihis küpsiste arv
+kypsised=`expr $yhes_kihis \* $kihid`
+#pakide arv võrdub kõikide küpsiste arv jagatud pakis olevate küpsiste arvuga
+pakk_arv=`expr $kypsised / $pakis`
+
+#kasuatamata küpsiste arv protsentides
+jaak=`expr $kypsised % $pakis`
+#
+#tulemuste väljastamine
+#
+echo "Kokku on vaja $pakk_arv pakki ja lisaks veel $jaak kypsist"
+#
+#skripti lõpp
