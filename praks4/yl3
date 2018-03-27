@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+echo -n "Mitu reisijat on gruppis? (reisijate_arv)"
+read reisjate_arv
+echo -n "Mitu kohta on bussis? (bussi_kohtade_arv)"
+read bussi_kohtade_arv
+bussist_jaab_maha=`expr $reisjate_arv % $bussi_kohtade_arv`
+echo "Bussist jaab maha $bussist_jaab_maha inimest."
+#
+#skripti lõpp
