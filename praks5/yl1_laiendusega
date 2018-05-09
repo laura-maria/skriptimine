@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+# hüpotenuusi arvutamine
+#
+echo -n "Siseta a külje pikkus: "
+read a
+echo -n "Siseta b külje pikkus: "
+read b
+#
+# a ruudus
+a2=`echo "scale=2;$a^2" | bc`
+# b ruudus
+b2=`echo "scale=2;$b^2" | bc`
+# c ruudus
+c2=`echo "scale=2;$a2+$b2" | bc`
+# c
+c=`echo "scale=2;sqrt($c2)" | bc`
+echo "c = $c"
