@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+echo -n "Sisesta a külje väärtus: "
+read a
+echo -n "Sisesta b külje väärtus: "
+read b
+#
+c=`echo "scale=2;sqrt($((($a * $a) + ($b * $b))))" | bc`
+echo "c = $c"
