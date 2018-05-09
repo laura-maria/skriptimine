@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+#hüpotenuusi arvutamine
+#
+echo -n "Sisesta a külje väärtus: "
+read a
+echo -n "Sisesta b külje pikkus: "
+read b
+#
+#a ruudus
+a2=$(($a * $a))
+#b ruudus
+b2=$(($b * $b))
+#c ruudus
+c2=$(($a2 + $b2))
+#c
+c=`echo "scale=2;sqrt($c2)" | bc`
+#väljastame c
+echo "c = $c"
