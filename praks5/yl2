@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+echo -n "Sisesta a külje väärtus: "
+read a
+echo -n "Sisesta b külje väärtus: "
+read b
+echo -n "Sisesta c külje väärtus: "
+read c
+#
+#s
+pindala=$( echo "scale=2;($a+$b+$c)/2" | bc )
+echo "pindala = $pindala"
