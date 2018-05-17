@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+echo -n "Sisesta ridade arv: "
+read Read
+	for ((i = 1; i <= $Read; i++ ))
+	do
+		echo -n "$i."
+		for (( j = 1; j <= $i; j++))
+		do
+			echo -n "*"
+		done
+		echo ""
+	done
