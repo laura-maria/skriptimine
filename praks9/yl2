@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+echo -n "Sisesta ridade arv: "
+read Read
+echo -n "Sisesta tarnide arv reas: "
+read Tarnid
+
+###
+
+for (( i = 1; i <= $Read; i++ ))
+do
+	for (( j =1 ; j <= 1; j++ ))
+	do
+		echo -n "$i."
+	done
+	for (( z = 1; z <= $Tarnid; z++ ))
+	do
+		echo -n "*"
+	done
+      echo ""
+done
