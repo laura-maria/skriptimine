@@ -1,0 +1,32 @@
+#!/bin/bash
+#tegin maha mihkli pealt
+echo -n "Sisesta ruutude arv: "
+read Ruut
+echo -n "Sisesta ridade arv: "
+read Read
+echo -n "Sisesta tarnide arv reas: "
+read Tarnid
+
+###
+for (( m = 1; m <= $Ruut; m++ ))
+do
+for (( i = 1; i <= $Read; i++ ))
+do
+		echo -n "$i."
+		for (( x = 1; x <= $Tarnid; x++ ))
+		do
+			if [ $(($m % 2)) -eq 0 ]
+			then
+				echo -n "*"
+			else
+				echo -n "0"
+			fi
+		done
+			echo ""
+			for (( l =1; l <= $Ruut; l++ ))
+			do
+				echo -n ""
+			done
+	done
+      echo ""
+done
